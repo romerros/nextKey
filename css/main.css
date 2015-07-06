@@ -1,19 +1,18 @@
-.lockers {
-    width: 141px;
+.locker {
+    width: 40px;
     height: 74px;
     background: rgb(255, 243, 232);
     padding: 25px;
     border: solid;
     border-radius: 10px;
-    border-color: rgb(146, 115, 84);
+    border-color: rgb(255, 128, 0);
     float: left;
     margin-left: 45px;
     margin-top: 45px;
     font-size: 45;
     text-align: center;
 }
-
-.knopka {
+.Key {
     font-size: 65px;
     margin-top: 225px;
     margin-left: 650px;
@@ -21,18 +20,15 @@
     text-align: center;
     background: linear-gradient(to top, #d0d0d0, #ff3838, #767676);
 }
-
-.knopka:hover {
+.Key:hover {
     background: linear-gradient(to top, #acacac, #ff0000, #c3c3c3);
 }
-
-.knopka:active {
+.Key:active {
     background: linear-gradient(to top, #ff3d3d, #ffffff, #e60000);
 }
-
 body {
-    background-image: url(fon2.jpg);
+    background-image: url(../img/BodyBackground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}   
+}
