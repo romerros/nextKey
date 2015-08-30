@@ -12,6 +12,7 @@
     font-size: 45;
     text-align: center;
 }
+
 .nextLocker {
     font-size: 65px;
     margin-top: 225px;
@@ -20,12 +21,16 @@
     text-align: center;
     background: linear-gradient(to top, #af3600, #ff6a1b, #533434);
 }
+
 .nextLocker:hover {
     background: linear-gradient(to top, #d6d6d6, #ff570d, #cccccc);
+    cursor: pointer;
 }
+
 .nextLocker:active {
     background: linear-gradient(to top, #ff5800, #c9c9c9, #ff5800);
 }
+
 body {
     background-image: url(../img/BodyBackground.jpg);
     background-repeat: no-repeat;
