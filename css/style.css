@@ -1,0 +1,53 @@
+body {
+    background-image: url(../img/BodyBackground.jpg);
+    background-size: cover;
+}
+
+.locker {
+    float: left;
+    margin: 20px;
+    padding: 50px;
+    border-style: solid;
+    border-color: #ff6200;
+    border-radius: 15px;
+    border-width: 5px;
+    font-size: 50px;
+    background-color: rgb(255, 238, 225);
+}
+
+.lockLocked {
+    background-color: rgb(226, 55, 55);
+    cursor: pointer;
+    /*transition: all;*/
+}
+
+.lockLocked:hover {
+    transition: all;
+    cursor: pointer;
+    background-color: rgb(255, 180, 125);
+    transition-duration: 1s;
+}
+
+.lockLocked:active {
+    background-color: white;
+    transition-duration: 0.1s;
+}
+
+.nextLocker {
+    margin-top: 200px;
+    margin-left: 500px;
+    border-radius: 10px;
+    font-size: 45px;
+    color: white;
+    background: linear-gradient(#ff8307, #ff4e00, #ff8307);
+}
+
+.nextLocker:hover {
+    background: linear-gradient(#ff6607, #ff1d00, #ff6607);
+    cursor: pointer;
+}
+
+.nextLocker:active {
+   background: #ffe6c5; 
+   color: #ff1d00;
+}
