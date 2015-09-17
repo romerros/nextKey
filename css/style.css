@@ -15,20 +15,20 @@ body {
     background-color: rgb(255, 238, 225);
 }
 
-.lockLocked {
+.locker--locked {
     background-color: rgb(226, 55, 55);
     cursor: pointer;
     /*transition: all;*/
 }
 
-.lockLocked:hover {
+.locker--locked:hover {
     transition: all;
     cursor: pointer;
     background-color: rgb(255, 180, 125);
     transition-duration: 1s;
 }
 
-.lockLocked:active {
+.locker--locked:active {
     background-color: white;
     transition-duration: 0.1s;
 }
