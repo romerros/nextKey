@@ -1,45 +1,51 @@
 body {
     background-image: url(../img/BodyBackground.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .locker {
     float: left;
+    right: 5px;
+    width: 90px;
+    height: 90px;
     margin: 20px;
-    padding: 50px;
+    margin-right: 60px;
     border-style: solid;
     border-color: #ff6200;
     border-radius: 15px;
     border-width: 5px;
-    font-size: 50px;
+    font-size: 60px;
+    text-align: center;
     background-color: rgb(255, 238, 225);
 }
 
 .locker--locked {
     background-color: rgb(226, 55, 55);
     cursor: pointer;
-    /*transition: all;*/
+    color: white;
 }
 
 .locker--locked:hover {
     transition: all;
     cursor: pointer;
     background-color: rgb(255, 180, 125);
-    transition-duration: 1s;
+    transition-duration: 0.3s;
 }
 
 .locker--locked:active {
     background-color: white;
-    transition-duration: 0.1s;
 }
 
 .nextLocker {
-    margin-top: 200px;
-    margin-left: 500px;
+    float: left;
+    margin-left: 300px;
+    margin-top: 250px;
     border-radius: 10px;
     font-size: 45px;
     color: white;
     background: linear-gradient(#ff8307, #ff4e00, #ff8307);
+    outline: inherit;
 }
 
 .nextLocker:hover {
@@ -50,4 +56,67 @@ body {
 .nextLocker:active {
    background: #ffe6c5; 
    color: #ff1d00;
+}
+
+.button--disabled {
+   color: #2f2f2f;
+   background: linear-gradient(#9a9a9a, #575757, #9a9a9a); 
+}
+
+.button--disabled:hover {
+   background: linear-gradient(#9a9a9a, #575757, #9a9a9a);
+   cursor: auto;
+}
+
+.edit--button {
+    margin-left: auto;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    background-image: url(../img/EditButton.png);
+    background-size: contain;
+}
+
+.edit--button:hover {
+    background-image: url(../img/EditButtonAnime.gif);
+    cursor: pointer;
+    
+}
+
+a {
+    text-decoration: none;
+    font-size: 25px;
+    
+}
+
+ul li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    color: white;
+    list-style: none;
+}
+
+.menu {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(#ffcd9b, #ff5e17, #ffcd9b);
+    top: -80px;
+    right: 55px;
+    border-style: solid;
+    border-color: #ff6200;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.edit--button:hover .menu{
+    top: -15px;
+    opacity: 1;
+}
+
+ul:hover a {
+    color: black;
 }

@@ -1,5 +1,7 @@
 $(document).on('ready', function() {
     
+    
+    
     $('button.nextLocker').on('click', function() {
         var $lockers = $('div.locker');
         var massivForFunction = [];
@@ -13,14 +15,13 @@ $(document).on('ready', function() {
         
         if ($index == -1) {
             alert('No free lockers found');
-            $('button.nextLocker').attr('disabled', "disabled").button("refresh");
-        } else {
-            $('button.nextLocker').removeAttr('disabled').button('refresh');
-        }
+            $('button.nextLocker').attr('disabled', "disabled").addClass("button--disabled");
+        };
     });
     
     $("div.locker").on('click', function() {
          deSelectLocker($(this));
+        $('button.nextLocker').removeAttr("disabled").removeClass("button--disabled");
     });
 });
 
@@ -31,5 +32,5 @@ function selectLocker($lockers) {
 
 function deSelectLocker($lockers) {
     $lockers.removeClass('locker--locked');
-    $lockers.data('lockerstatus', 0);
+    $lockers.data('lockerstatus', 0);   
 };
