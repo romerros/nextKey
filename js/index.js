@@ -23,6 +23,13 @@ $(document).on('ready', function() {
          deSelectLocker($(this));
         $('button.nextLocker').removeAttr("disabled").removeClass("button--disabled");
     });
+    //Adding new locker by button (+)
+    $('button.addLocker').on('click', function() {
+        var newDiv = document.createElement('div');
+        newDiv.className = 'locker';
+        newDiv.innerHTML = '12';
+        document.body.appendChild(newDiv);
+    })
 });
 
 function selectLocker($lockers) {
