@@ -1,45 +1,51 @@
 body {
     background-image: url(../img/BodyBackground.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .locker {
     float: left;
+    right: 5px;
+    width: 90px;
+    height: 90px;
     margin: 20px;
-    padding: 50px;
+    margin-right: 60px;
     border-style: solid;
     border-color: #ff6200;
     border-radius: 15px;
     border-width: 5px;
-    font-size: 50px;
+    font-size: 60px;
+    text-align: center;
     background-color: rgb(255, 238, 225);
+    box-shadow: 0 0 10px #3e3e3e;
 }
 
 .locker--locked {
-    background-color: rgb(226, 55, 55);
+    background-color: rgb(226, 56, 56);
+    border-color: rgb(77, 69, 64);
     cursor: pointer;
-    /*transition: all;*/
+    color: white;
 }
 
 .locker--locked:hover {
     transition: all;
     cursor: pointer;
     background-color: rgb(255, 180, 125);
-    transition-duration: 1s;
+    transition-duration: 0.3s;
+    box-shadow: 0 0 32px #000000;
 }
 
 .locker--locked:active {
     background-color: white;
-    transition-duration: 0.1s;
 }
 
 .nextLocker {
-    margin-top: 200px;
-    margin-left: 500px;
     border-radius: 10px;
     font-size: 45px;
     color: white;
     background: linear-gradient(#ff8307, #ff4e00, #ff8307);
+    outline: inherit;
 }
 
 .nextLocker:hover {
@@ -49,5 +55,35 @@ body {
 
 .nextLocker:active {
    background: #ffe6c5; 
+   color: #ff1d00;
+}
+
+.button--disabled {
+   color: #2f2f2f;
+   background: linear-gradient(#9a9a9a, #575757, #9a9a9a); 
+}
+
+.button--disabled:hover {
+   background: linear-gradient(#9a9a9a, #575757, #9a9a9a);
+   cursor: auto;
+}
+
+.addLocker {
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 45px;
+    color: white;
+    background: linear-gradient(#ff8307, #ff4e00, #ff8307);
+    outline: inherit;
+}
+
+.addLocker:hover {
+    background: linear-gradient(#ff6607, #ff1d00, #ff6607);
+    cursor: pointer;
+}
+
+.addLocker:active {
+    background: #ffe6c5; 
    color: #ff1d00;
 }
