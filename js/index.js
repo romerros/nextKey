@@ -27,7 +27,11 @@ $(document).on('ready', function() {
     $('button.addLocker').on('click', function() {
         var newDiv = document.createElement('div');
         newDiv.className = 'locker';
-        newDiv.innerHTML = '12';
+        var $summeryLockersNow = $('div.locker');
+        for (j = 0; j < $summeryLockersNow.length; j++) {
+            var k = j + 2;
+            newDiv.innerHTML = k;
+        }
         document.body.appendChild(newDiv);
     })
 });
