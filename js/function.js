@@ -1,19 +1,19 @@
-function getNextLockNum(doors) {
-    for (var i = 0; i < doors.length; i++) {
-          if (i == 0 && doors[i] == 0 && doors[i+1] == 0) {
+function getNextLockerNumber(lockers) {
+    for (var i = 0; i < lockers.length; i++) {
+          if (i == 0 && lockers[i] == 0 && lockers[i+1] == 0) {
               return i;
           }
-          if (doors[i] == 0 && doors[i-1] == 0 && doors[i+1] == 0) {
+          if (lockers[i] == 0 && lockers[i-1] == 0 && lockers[i+1] == 0) {
               return i;
           }
-          if (i == doors.length -1 && doors[i] == 0 && doors[i-1] == 0) {
+          if (i == lockers.length -1 && lockers[i] == 0 && lockers[i-1] == 0) {
               return i;
           }
     }
-        for (i = 0; i < doors.length; i++) {
-              if (doors[i] == 0) {
-                return i;
-              }
-        }
+    for (i = 0; i <= lockers.length; i++) {
+          if (lockers[i] == 0) {
+              return i;
+          }
+    }
     return -1;
 }
