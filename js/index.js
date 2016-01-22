@@ -1,9 +1,8 @@
 $(document).on('ready', function() {
     
-    
-    
+        var $lockers;
     $('button.nextLocker').on('click', function() {
-        var $lockers = $('div.locker');
+        $lockers = $('div.locker');
         var massivForFunction = [];
         var $index;
         for (var i = 0; i < $lockers.length; i++) {
@@ -19,21 +18,35 @@ $(document).on('ready', function() {
         };
     });
     
-    $("div.locker").on('click', function() {
-         deSelectLocker($(this));
+    $('#block').delegate("div", 'click', function() {
+        deSelectLocker($(this));
         $('button.nextLocker').removeAttr("disabled").removeClass("button--disabled");
     });
-    //Adding new locker by button (+)
+                       //Adding new locker by button (+)
+    var k;
+    var newDiv = {};
     $('button.addLocker').on('click', function() {
-        var newDiv = document.createElement('div');
-        newDiv.className = 'locker';
-        var $summeryLockersNow = $('div.locker');
-        for (j = 0; j < $summeryLockersNow.length; j++) {
-            var k = j + 2;
+        newDiv = document.createElement('div');
+        $(newDiv).attr({
+            'id': 'newLocker',
+            'data-lockerstatus': '0',
+            'class': 'locker animated bounce'
+        });
+        var $summeryLockersNow = $('div');
+            for (var i = 0; i < $summeryLockersNow.length; i++) {
+            k = i + 1;
             newDiv.innerHTML = k;
-        }
-        document.body.appendChild(newDiv);
-    })
+        };
+        var cont = document.getElementById('block');
+        cont.appendChild(newDiv);
+        $('#newLocker:last-child').append('<button class="trashBox" title="Delete Locker" ><span class="trash1"></span><span class="trash2"></span></button>');
+        $('.trashBox').hide();
+    });
+                       //CheckBox function
+        $('.trashBox').hide();
+        $('.unlockTrashBox').on("click", function() {
+            $('.trashBox').toggle().animate;
+        });
 });
 
 function selectLocker($lockers) {
@@ -43,5 +56,5 @@ function selectLocker($lockers) {
 
 function deSelectLocker($lockers) {
     $lockers.removeClass('locker--locked');
-    $lockers.data('lockerstatus', 0);   
+    $lockers.data('lockerstatus', 0);
 };

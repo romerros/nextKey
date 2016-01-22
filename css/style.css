@@ -2,6 +2,15 @@ body {
     background-image: url(../img/BodyBackground.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    box-shadow: 0 0 10px black;
+}
+
+.conteiner {
+    overflow: auto;
+    display: block;
+    height: 600px;
+    width: auto;
+    border: 10px solid black;
 }
 
 .locker {
@@ -15,7 +24,7 @@ body {
     border-color: #ff6200;
     border-radius: 15px;
     border-width: 5px;
-    font-size: 60px;
+    font-size: 59px;
     text-align: center;
     background-color: rgb(255, 238, 225);
     box-shadow: 0 0 10px #3e3e3e;
@@ -69,6 +78,7 @@ body {
 }
 
 .addLocker {
+    margin-left: 20px;
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -86,4 +96,49 @@ body {
 .addLocker:active {
     background: #ffe6c5; 
    color: #ff1d00;
+}
+
+.trash1 {
+    background-image: url(../img/trash1.png);
+    display: non;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: -30px;
+    background-repeat: no-repeat;
+    height: 17px;
+    width: 16px;
+}
+
+.trash2 {
+    background-image: url(../img/trash2.png);
+    display: non;
+    position: absolute;
+    margin-top: 24px;
+    margin-left: -30px;
+    background-repeat: no-repeat;
+    transition: 125ms;
+    height: 18px;
+    width: 16px;
+}
+
+.trash2:hover {
+    transform-origin: 7% 100%;
+    transform-origin: left;
+    transform: rotate(-30deg);
+    transition: 125ms;
+    transition-property: all;
+}
+
+.trashBox {
+    background: none;
+    border: none;
+    height: 13px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+}
+
+.trashBox:hover {
+    cursor: pointer;
 }
