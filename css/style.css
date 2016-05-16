@@ -28,6 +28,7 @@ body {
     text-align: center;
     background-color: rgb(255, 238, 225);
     box-shadow: 0 0 10px #3e3e3e;
+    transition: 0.3s;
 }
 
 .locker--locked {

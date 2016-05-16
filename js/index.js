@@ -22,6 +22,7 @@ $(document).on('ready', function() {
         deSelectLocker($(this));
         $('button.nextLocker').removeAttr("disabled").removeClass("button--disabled");
     });
+    
                        //Adding new locker by button (+)
     var k;
     var newDiv = {};
@@ -30,23 +31,32 @@ $(document).on('ready', function() {
         $(newDiv).attr({
             'id': 'newLocker',
             'data-lockerstatus': '0',
-            'class': 'locker animated bounce'
+            'class': 'locker'
         });
         var $summeryLockersNow = $('div');
             for (var i = 0; i < $summeryLockersNow.length; i++) {
             k = i + 1;
             newDiv.innerHTML = k;
-        };
+            };
         var cont = document.getElementById('block');
         cont.appendChild(newDiv);
         $('#newLocker:last-child').append('<button class="trashBox" title="Delete Locker" ><span class="trash1"></span><span class="trash2"></span></button>');
         $('.trashBox').hide();
-    });
-                       //CheckBox function
-        $('.trashBox').hide();
-        $('.unlockTrashBox').on("click", function() {
-            $('.trashBox').toggle().animate;
+        
+                       //Trashbox function
+        $('.trashBox').on('click', function() {
+            $(this).parent().remove();
         });
+    });
+    
+                       //CheckBox function
+    $('.trashBox').hide();
+    $('.unlockTrashBox').on("click", function() {
+        $('.trashBox').toggle();
+    });
+    
+                        
+    
 });
 
 function selectLocker($lockers) {
