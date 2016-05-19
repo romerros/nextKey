@@ -27,6 +27,12 @@ $(document).on('ready', function() {
     var k;
     var newDiv = {};
     $('button.addLocker').on('click', function() {
+	if ($('.unlockTrashBox').prop('checked')) {
+            $('.unlockTrashBox').removeAttr('checked');
+            alert('Checkbox is checked\nPlease click "Ok" to continue');
+            $('.trashBox').hide();
+            return;
+        }
         newDiv = document.createElement('div');
         $(newDiv).attr({
             'id': 'newLocker',
