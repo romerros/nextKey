@@ -1,6 +1,6 @@
 $(document).on('ready', function() {
-    
-        var $lockers;
+    //Adding new Locker
+    var $lockers;
     $('button.nextLocker').on('click', function() {
         $lockers = $('div.locker');
         var massivForFunction = [];
@@ -9,8 +9,8 @@ $(document).on('ready', function() {
             massivForFunction[i] = $lockers.eq(i).data("lockerstatus");
         }
           
-            $index = getNextLockerNumber(massivForFunction);
-            selectLocker($lockers.eq($index));
+        $index = getNextLockerNumber(massivForFunction);
+        selectLocker($lockers.eq($index));
         
         if ($index == -1) {
             alert('No free lockers found');
@@ -18,51 +18,38 @@ $(document).on('ready', function() {
         };
     });
     
-    $('#block').delegate("div", 'click', function() {
-        deSelectLocker($(this));
-        $('button.nextLocker').removeAttr("disabled").removeClass("button--disabled");
-    });
+    //Disabling NextKey Button        
+        $('.locker').on('click', function() {
+            deSelectLocker($(this));
+            $('button.nextLocker').removeAttr("disabled").removeClass("button--disabled");
+        });
     
-                       //Adding new locker by button (+)
-    var k;
-    var newDiv = {};
+    //Adding new locker by button (+)
     $('button.addLocker').on('click', function() {
-	if ($('.unlockTrashBox').prop('checked')) {
+        if ($('.unlockTrashBox').prop('checked')) {
             $('.unlockTrashBox').removeAttr('checked');
             alert('Checkbox is checked\nPlease click "Ok" to continue');
             $('.trashBox').hide();
             return;
         }
-        newDiv = document.createElement('div');
-        $(newDiv).attr({
-            'id': 'newLocker',
-            'data-lockerstatus': '0',
-            'class': 'locker'
-        });
-        var $summeryLockersNow = $('div');
-            for (var i = 0; i < $summeryLockersNow.length; i++) {
-            k = i + 1;
-            newDiv.innerHTML = k;
-            };
-        var cont = document.getElementById('block');
-        cont.appendChild(newDiv);
-        $('#newLocker:last-child').append('<button class="trashBox" title="Delete Locker" ><span class="trash1"></span><span class="trash2"></span></button>');
-        $('.trashBox').hide();
         
-                       //Trashbox function
+        var $summeryLockersNow = $('div.locker');
+        var k = $summeryLockersNow.length + 1;
+        var locker = $($('#block div.locker')[0]).clone(true);
+        $(locker).appendTo('.conteiner');
+        $('p:last').text(k);
+        
+        //Trashbox function
         $('.trashBox').on('click', function() {
             $(this).parent().remove();
         });
     });
     
-                       //CheckBox function
+    //CheckBox function
     $('.trashBox').hide();
     $('.unlockTrashBox').on("click", function() {
         $('.trashBox').toggle();
     });
-    
-                        
-    
 });
 
 function selectLocker($lockers) {

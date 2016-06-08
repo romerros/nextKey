@@ -15,19 +15,18 @@ body {
 
 .locker {
     float: left;
-    right: 5px;
-    width: 90px;
-    height: 90px;
-    margin: 20px;
-    margin-right: 60px;
+    width: 3.5em;
+    height: 3.5em;
+    margin: 1.5em;
+    margin-right: 1.5em;
     border-style: solid;
-    border-color: #ff6200;
+    border-color: rgba(255, 29, 0, 0.58);
     border-radius: 15px;
     border-width: 5px;
-    font-size: 59px;
-    text-align: center;
     background-color: rgb(255, 238, 225);
     box-shadow: 0 0 10px #3e3e3e;
+    text-align: center;
+    font-size: 1.9em;
     transition: 0.3s;
 }
 
@@ -43,7 +42,7 @@ body {
     cursor: pointer;
     background-color: rgb(255, 180, 125);
     transition-duration: 0.3s;
-    box-shadow: 0 0 32px #000000;
+    box-shadow: 0 0 1.2em #000000;
 }
 
 .locker--locked:active {
@@ -51,8 +50,8 @@ body {
 }
 
 .nextLocker {
-    border-radius: 10px;
-    font-size: 45px;
+    border-radius: 0.2em;
+    font-size: 2em;
     color: white;
     background: linear-gradient(#ff8307, #ff4e00, #ff8307);
     outline: inherit;
@@ -79,11 +78,12 @@ body {
 }
 
 .addLocker {
-    margin-left: 20px;
-    border-radius: 10px;
+    margin-top: 0.2em;
+    margin-left: 0.2em;
+    border-radius: 0.2em;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 45px;
+    font-size: 2em;
     color: white;
     background: linear-gradient(#ff8307, #ff4e00, #ff8307);
     outline: inherit;
@@ -100,22 +100,22 @@ body {
 }
 
 .trash1 {
+    margin-left: -10px;
+    margin-top: -6px;
     background-image: url(../img/trash1.png);
-    display: non;
+    display: inline-block;
     position: absolute;
-    margin-top: 25px;
-    margin-left: -30px;
     background-repeat: no-repeat;
     height: 17px;
     width: 16px;
 }
 
 .trash2 {
+    margin-top: -8px;
+    margin-left: -10px;
     background-image: url(../img/trash2.png);
-    display: non;
+    display: inline-block;
     position: absolute;
-    margin-top: 24px;
-    margin-left: -30px;
     background-repeat: no-repeat;
     transition: 125ms;
     height: 18px;
@@ -131,9 +131,13 @@ body {
 }
 
 .trashBox {
+    margin-top: -10;
+    display: inline-block;
+    position: relative;
     background: none;
     border: none;
-    height: 13px;
+    height: 20px;
+    width:16px;
     border: none;
     cursor: pointer;
     display: inline-block;
