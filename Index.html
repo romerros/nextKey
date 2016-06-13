@@ -3,24 +3,28 @@
    <title>Grand Sport</title>
    <meta charset="utf-8">
    <link rel='stylesheet' type="text/css" href="css/style.css">
-   <link rel='stylesheet' type="text/css" href="css/animate.css">
-   <script type="text/javascript" src='js/function.js'></script>
-   <script type="text/javascript" src='js/lib/jquery-1.11.3.min.js'></script>
-   <script type="text/javascript" src='js/index.js'></script>
+   <script type="text/javascript" src='js/function.js'>
+</script>
+   <script type="text/javascript" src='js/lib/jquery-1.12.4.min.js'>
+</script>
+   <script type="text/javascript" src='js/index.js'>
+</script>
   </head>
   <body>
-   <div class="locker animated bounce" data-lockerStatus='0'>1</div>
-   <div class="locker animated bounce" data-lockerStatus='0'>2</div>
-   <div class="locker animated bounce" data-lockerStatus='0'>3</div>
-   <div class="locker animated bounce" data-lockerStatus='0'>4</div>
-   <div class="locker animated bounce" data-lockerStatus='0'>5</div>
-   <div class="locker animated bounce" data-lockerStatus='0'>6</div>
-   <div class="locker animated bounce" data-lockerStatus='0'>7</div>
-   <div class="locker animated bounce" data-lockerStatus='0'>8</div>
-   <div class="locker animated bounce" data-lockerStatus='0'>9</div>
-   <div class="locker animated bounce" data-lockerStatus='0'>10</div>
-   <div class="locker animated bounce" data-lockerStatus='0'>11</div>
-   <button class="nextLocker animated bounceIn" title="Get Next Locker`s Key">Next Key</button>  
-   <button class="addLocker animated bounceIn" title="Ceate a New Locker">+</button>
+    <div class="conteiner" id="block">
+       <div class="locker" data-lockerStatus='0'>
+          <p class="lockersNumber">1</p>
+          <button class="trashBox" title="Delete Locker" >
+            <span class="trash1"></span>
+            <span class="trash2"></span>
+          </button>
+       </div>
+   </div>
+   <button class="nextLocker" title="Get Next Locker`s Key">Next Key</button>  
+   <button class="addLocker" title="Ceate a New Locker">+</button>
+   <input id="editLockers" type="checkbox" class="unlockTrashBox" title="Show trashes" />
+   <label for="editLockers">Show trashes</label>
+   <br><br><br>
+   <span class="guests">Visitors per day: <h class="today">0</h></span>  
   </body>
 </html>
