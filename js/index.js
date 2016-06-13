@@ -19,10 +19,13 @@ $(document).on('ready', function() {
     });
     
     //Disabling NextKey Button        
-        $('.locker').on('click', function() {
-            deSelectLocker($(this));
-            $('button.nextLocker').removeAttr("disabled").removeClass("button--disabled");
-        });
+    $('.locker').on('click', function() {
+        deSelectLocker($(this));
+        $('button.nextLocker').removeAttr("disabled").removeClass("button--disabled");
+        
+        // Counter Guests per day
+            $('.today').html(+$('.today').html()+1);
+    });
     
     //Adding new locker by button (+)
     $('button.addLocker').on('click', function() {
@@ -31,18 +34,18 @@ $(document).on('ready', function() {
             alert('Checkbox is checked\nPlease click "Ok" to continue');
             $('.trashBox').hide();
             return;
-        }
+        };
         
         var $summeryLockersNow = $('div.locker');
         var k = $summeryLockersNow.length + 1;
         var locker = $($('#block div.locker')[0]).clone(true);
         $(locker).appendTo('.conteiner');
-        $('p:last').text(k);
-        
-        //Trashbox function
-        $('.trashBox').on('click', function() {
-            $(this).parent().remove();
-        });
+        $('p', locker).text(k);        
+    });
+
+    //Trashbox function
+    $('.trashBox').on('click', function() {
+        $(this).parent().remove();
     });
     
     //CheckBox function

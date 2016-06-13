@@ -147,3 +147,13 @@ body {
 .trashBox:hover {
     cursor: pointer;
 }
+
+.guests {
+    font-size: 1.4em;
+    text-shadow: 2px 2px 1px black;
+    color: darkorange;
+}
+
+.today {
+    margin-left: 10px;
+}
